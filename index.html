@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intermediate HTML, CSS and JavaScript internship assignment">
+    <title>Internship Assignment | Contact & Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div>
+                <p class="eyebrow">INTERNSHIP ASSIGNMENT</p>
+                <h1>Intermediate HTML, CSS &amp; JavaScript</h1>
+                <p class="subtitle">Responsive Contact &amp; Task Management Application</p>
+            </div>
+            <a class="header-button" href="#contact">Contact Form</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Responsive layout using Flexbox and CSS Grid -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="badge">Task - 2</span>
+                    <h2>Modern, Responsive &amp; Interactive Web Page</h2>
+                    <p>
+                        This project demonstrates semantic HTML, responsive CSS using
+                        Flexbox and Grid, JavaScript DOM manipulation, and client-side
+                        form validation.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                        <a href="#tasks" class="btn btn-secondary">Manage Tasks</a>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="card-icon">✓</div>
+                    <h3>Project Highlights</h3>
+                    <ul>
+                        <li>Responsive design</li>
+                        <li>Form validation</li>
+                        <li>Dynamic task management</li>
+                        <li>Clean and accessible UI</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Grid content areas -->
+        <section class="container content-grid">
+            <!-- Contact Form -->
+            <article class="panel" id="contact">
+                <div class="panel-heading">
+                    <div>
+                        <p class="section-label">01 / FORM</p>
+                        <h2>Contact Form</h2>
+                    </div>
+                </div>
+
+                <form id="contactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name <span>*</span></label>
+                            <input type="text" id="name" name="name"
+                                   placeholder="Enter your full name" autocomplete="name">
+                            <small class="error" id="nameError"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span>*</span></label>
+                            <input type="email" id="email" name="email"
+                                   placeholder="you@example.com" autocomplete="email">
+                            <small class="error" id="emailError"></small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject <span>*</span></label>
+                        <input type="text" id="subject" name="subject"
+                               placeholder="Enter the subject">
+                        <small class="error" id="subjectError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span>*</span></label>
+                        <textarea id="message" name="message" rows="5"
+                                  placeholder="Write your message here"></textarea>
+                        <small class="error" id="messageError"></small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width">Submit Form</button>
+                    <p id="formSuccess" class="success-message" role="status"></p>
+                </form>
+            </article>
+
+            <!-- Task Manager -->
+            <article class="panel" id="tasks">
+                <div class="panel-heading">
+                    <div>
+                        <p class="section-label">02 / DOM</p>
+                        <h2>Task Manager</h2>
+                    </div>
+                    <span class="task-count" id="taskCount">0 tasks</span>
+                </div>
+
+                <div class="task-input">
+                    <label class="sr-only" for="taskInput">New task</label>
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                    <button type="button" id="addTaskBtn" class="btn btn-primary">Add</button>
+                </div>
+
+                <p id="taskMessage" class="task-message" role="status"></p>
+                <ul id="taskList" class="task-list"></ul>
+
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">✓</div>
+                    <h3>No tasks yet</h3>
+                    <p>Add a task above to get started.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Responsive features -->
+        <section class="container features">
+            <div class="section-intro">
+                <p class="section-label">03 / FEATURES</p>
+                <h2>Implementation Overview</h2>
+                <p>The layout adapts across desktop, tablet and mobile screen sizes.</p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span>01</span>
+                    <h3>HTML5</h3>
+                    <p>Semantic structure with accessible labels, forms and navigation.</p>
+                </div>
+                <div class="feature-card">
+                    <span>02</span>
+                    <h3>CSS3</h3>
+                    <p>Flexbox, CSS Grid, media queries, transitions and responsive spacing.</p>
+                </div>
+                <div class="feature-card">
+                    <span>03</span>
+                    <h3>JavaScript</h3>
+                    <p>DOM manipulation, validation, dynamic task creation and deletion.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Internship Assignment &bull; Intermediate HTML, CSS &amp; JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
